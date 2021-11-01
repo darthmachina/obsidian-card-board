@@ -749,7 +749,7 @@ subscriptions _ =
                                 InteropDefinitions.FileUpdated markdownFile ->
                                     VaultFileUpdated markdownFile
 
-                                InteropDefinitions.InitCompleted _ ->
+                                InteropDefinitions.InitCompleted ->
                                     InitCompleted
 
                                 InteropDefinitions.SettingsUpdated newSettings ->
