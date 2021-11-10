@@ -366,7 +366,7 @@ toString (TaskItem fields_ _) =
 
 removeTag : String -> TaskItem -> TaskItem
 removeTag tag (TaskItem fields_ subtasks_) =
-    TaskItem { fields_ | tags = List.filter (\t -> t /= tag) fields_.tags } (List.map (removeTagFromFields tag) subtasks_)
+    TaskItem (removeTagFromFields tag fields_) (List.map (removeTagFromFields tag) subtasks_)
 
 
 removeTagFromFields : String -> TaskItemFields -> TaskItemFields
